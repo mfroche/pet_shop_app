@@ -1,4 +1,4 @@
-import 'package:first_app/utils/colors.dart';
+import 'package:first_app/pages/pet_list_page.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatelessWidget {
@@ -48,8 +48,8 @@ class LandingPage extends StatelessWidget {
               )
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -61,7 +61,7 @@ class LandingPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12),
                 Text(
                   'Connect with 5-star pet caregivers near you who offer boarding, walking, house sitting or day care.',
                   textAlign: TextAlign.center,
@@ -70,7 +70,23 @@ class LandingPage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () {}, child: Text('Get Started')))
+          const SizedBox(height: 10),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const PetListPage();
+                    },
+                  ),
+                );
+              },
+              child: const Text('Get Started'),
+            ),
+          )
         ],
       ),
     );
