@@ -1,4 +1,5 @@
 import 'package:first_app/pages/home_page.dart';
+import 'package:first_app/pages/landing_page.dart';
 import 'package:first_app/pages/location_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Pet Shop App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true, fontFamily: "Poppins"),
-      home: LocationPage(),
+      home: LandingPage(),
     );
   }
 }
