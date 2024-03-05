@@ -70,7 +70,7 @@ class LandingPage extends StatelessWidget {
               ],
             ),
           ),
-          ElevatedButton(onPressed: () {}, child: child)
+          SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () {}, child: Text('Get Started')))
         ],
       ),
     );
